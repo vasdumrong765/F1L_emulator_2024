@@ -1,21 +1,26 @@
-## F1L_emulator_2024
+## F1L_emulator_2024: Exploring scRNA-seq expression heterogeneity among cancer cell lines
 This repo is for tracking the progress on the F1L internship emulator based on Fiugre One Lab Dean Lee's LinkedIn articles. The progress will be first commited to the `dev` branch and pushed to the `main` branch when it reaches a certain milestone such as a completion of notes, scripts, etc.
 
 You can find memos on various topics here in `README.md`. This memo is not meant to be a literature review. It is to invoke some thoughts and perspectives to accompany the topics discussed here.
 
 **References to Dean Lee's articles**
-[X] [Week 1](https://www.linkedin.com/pulse/week-1-f1l-internship-emulator-ksq-dean-lee-354ke/)
-[ ] [Week 2](https://www.linkedin.com/pulse/week-2-f1l-internship-emulator-paper-dean-lee-3crce/)
-[ ] [Week 3](https://www.linkedin.com/pulse/week-3-f1l-internship-emulator-data-dean-lee-h83qe/)
-[ ] [Week 4](https://www.linkedin.com/pulse/week-4-f1l-internship-emulator-biology-dean-lee-ja4me/)
-[ ] [Week 5](https://www.linkedin.com/pulse/week-5-f1l-internship-emulator-slides-dean-lee-qqufe/)
+
+- [X] [Week 1](https://www.linkedin.com/pulse/week-1-f1l-internship-emulator-ksq-dean-lee-354ke/)
+- [ ] [Week 2](https://www.linkedin.com/pulse/week-2-f1l-internship-emulator-paper-dean-lee-3crce/)
+- [ ] [Week 3](https://www.linkedin.com/pulse/week-3-f1l-internship-emulator-data-dean-lee-h83qe/)
+- [ ] [Week 4](https://www.linkedin.com/pulse/week-4-f1l-internship-emulator-biology-dean-lee-ja4me/)
+- [ ] [Week 5](https://www.linkedin.com/pulse/week-5-f1l-internship-emulator-slides-dean-lee-qqufe/)
 
 ## Week 1 - The Key Scientific Question (KSQ)
-Reference: https://www.linkedin.com/pulse/week-1-f1l-internship-emulator-ksq-dean-lee-354ke/
 
 The KSQ: Using available scRNA-seq data from cancer cell lines, how would you explore the use of the following FDA-approved antibody therapies in additional cancers?
 * Trastuzumab: Targets HER2 and is used in the treatment of HER2-positive breast and gastric cancers.
 * Bevacizumab: Targets VEGF and is used for a variety of cancers, including colorectal, lung, glioblastoma, breast, liver, and kidney cancer.
+
+#### <code style="color : lightskyblue">Quick info on these mAb's targets</code>
+* HER2 is a member of the human epidermal growth factor receptor, a plasma-membrane-bound receptor tyrosine kinase (Gene name: *ERBB2*, Uniprot_ID: P04626). Activation of HER2, usually via homo/heterodimerization with EGFR, promotes cell proliferation. Overexpression or gene amplification of HER2 occurs in ~14% of breast cancer ([NIH Cancer Stat Facts](https://seer.cancer.gov/statfacts/html/breast-subtypes.html))
+
+* VEGF stands for Vascular endothelial growth factor. VEGF binds to a tyrosine kinase VEGF receptors which is known to promote angiogenesis. Angiogenesis is a crucial step for tumorigenesis.
 
 #### General thoughts
 Cancer cells are known to exist in heterogenous subpopulations. Using scRNA-seq, we can hope to capture the information about their heterogeneity based on their transcriptional states. 
@@ -39,7 +44,6 @@ If we have scRNA-seq data from an experiment where Trastuzumab or Bevacizumab wa
 
 
 ## Week 2 - Kinker et al
-Reference: https://www.linkedin.com/pulse/week-2-f1l-internship-emulator-paper-dean-lee-3crce/?trackingId=D%2Fv8Iq3CREOcoeJT2FnV8A%3D%3D
 This week, we are assigned to read a paper Pan-cancer single-cell RNA-seq identifies recurring programs of cellular heterogeneity by Kinker et al. This gives us a bit more context for the KSQ. 
 
 #### My brief summary
