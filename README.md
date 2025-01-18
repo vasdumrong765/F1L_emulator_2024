@@ -44,3 +44,13 @@ This week, we are assigned to read a paper Pan-cancer single-cell RNA-seq identi
 * What are Recurrent Heterogeneous Programs (RHPs) and how were they defined?
 * How do the identified RHPs relate to in vivo programs of heterogeneity in tumors, and what evidence supports this relationship?
 * Where can you download the scRNA-seq data as shown in Figure 1B?
+* * I downloaded `Metadata.txt` and `UMIcount_data.txt` from https://singlecell.broadinstitute.org/single_cell/study/SCP542/pan-cancer-cell-line-heterogeneity#study-download
+
+## Week 3
+
+Setting up a new env with conda based on Mark Sanborn's youtube video:
+```
+conda create -n sc2024 python=3.9
+conda activate sc2024
+pip install notebook scanpy doubletdetection
+```
