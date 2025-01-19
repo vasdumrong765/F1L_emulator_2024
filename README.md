@@ -66,17 +66,37 @@ The authors hypothesized that there could some intrinsic properties shared among
 
 ## Week 3 - Scanpy with Kinker et al data
 
-Usually the best practice for version control a Python project is to create a virtual env for each project. You may also share the venv across projects. Because scRNA-seq is memory intensive, I'll use google colab notebook for data analysis. Version control notebooks is harder. Many times, for projects that require deployment of models, traditional python scripts are preferred, while notebooks are very good for EDA and reports.
+Usually the best practice for version control a Python project is to create a virtual env for each project. You may also share the venv across projects. Because analyzing scRNA-seq data is memory intensive, I'll use google colab notebook for data analysis with pre-installed packages.
 
+This week, I will follow Dean Lee's notebook templates to re-enact figure 1 from Kinker et al. I made necessary changes to make sure that these codes can be run end-to-end in google colab environment.
+* `240701_kinker_anndata.ipynb`
+* `240702_kinker_scanpy.ipynb`
+* `240703_kinker_explore.ipynb`
 
-
-
-
-
-
-Setting up a new env with conda based on Mark Sanborn's youtube video:
+For data download directly in Colab session, run this code below:
 ```
-conda create -n sc2024 python=3.9
-conda activate sc2024
-pip install notebook scanpy doubletdetection
+# After signing into SCP, generate temporary curl download link with 'Bulk download
+# The auth_code token can only be used once
+!curl --insecure "link_from_SCP" -o cfg.txt
+
+# Search for Metadata.txt and UMIcount_data.txt
+! mkdir Data
+! grep "Metadata.txt" cfg.txt | grep -oP 'url="[^"]+"' | sed 's/url="//;s/"$//' | \
+  xargs -I {} wget --quiet -O Data/Metadata.txt {} || echo "Download failed"
+
+! grep "UMIcount_data.txt" cfg.txt | grep -oP 'url="[^"]+"' | sed 's/url="//;s/"$//' | \
+  xargs -I {} wget --quiet -O Data/UMIcount_data.txt {} || echo "Download failed"
+
+# List the Data directory for confirmation
+! ls -la Data/
 ```
+
+**Re-enact Figure 1**
+* By the time you get to the end of `240702_kinker_scanpy.ipynb`, you should have produced a UMAP plot, a 2-D visualization of the scRNA-seq dataset. Does this look like Figure 1B of Kinker et al.? How is it similar? How is it different? Take notes directly in your Jupyter notebook.
+
+
+* Now color the dots in the UMAP plot by the different columns of the metadata. What patterns do you see? Do they make sense? Take notes directly in your Jupyter notebook.
+
+
+* Now for the challenge. Try to reproduce Figure 2B and 2D from Kinker et al. See if you can recapitulate some of the patterns in the data that the authors describe. Do your best, but don’t lose any sleep over this.
+
