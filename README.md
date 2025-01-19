@@ -1,4 +1,6 @@
 ## F1L_emulator_2024: Exploring scRNA-seq expression heterogeneity among cancer cell lines
+![Main_Image](figures/coloured-dna-espiral.jpg)
+
 This repo is for tracking the progress on the F1L internship emulator based on Fiugre One Lab Dean Lee's LinkedIn articles. The progress will be first commited to the `dev` branch and pushed to the `main` branch when it reaches a certain milestone such as a completion of notes, scripts, etc.
 
 You can find memos on various topics here in `README.md`. This memo is not meant to be a literature review. It is to invoke some thoughts and perspectives to accompany the topics discussed here.
@@ -6,7 +8,7 @@ You can find memos on various topics here in `README.md`. This memo is not meant
 **References to Dean Lee's articles**
 
 - [X] [Week 1](https://www.linkedin.com/pulse/week-1-f1l-internship-emulator-ksq-dean-lee-354ke/)
-- [ ] [Week 2](https://www.linkedin.com/pulse/week-2-f1l-internship-emulator-paper-dean-lee-3crce/)
+- [X] [Week 2](https://www.linkedin.com/pulse/week-2-f1l-internship-emulator-paper-dean-lee-3crce/)
 - [ ] [Week 3](https://www.linkedin.com/pulse/week-3-f1l-internship-emulator-data-dean-lee-h83qe/)
 - [ ] [Week 4](https://www.linkedin.com/pulse/week-4-f1l-internship-emulator-biology-dean-lee-ja4me/)
 - [ ] [Week 5](https://www.linkedin.com/pulse/week-5-f1l-internship-emulator-slides-dean-lee-qqufe/)
@@ -62,7 +64,15 @@ The authors hypothesized that there could some intrinsic properties shared among
 * Where can you download the scRNA-seq data as shown in Figure 1B?
     * I downloaded `Metadata.txt` and `UMIcount_data.txt` from https://singlecell.broadinstitute.org/single_cell/study/SCP542/pan-cancer-cell-line-heterogeneity#study-download
 
-## Week 3
+## Week 3 - Scanpy with Kinker et al data
+
+Usually the best practice for version control a Python project is to create a virtual env for each project. You may also share the venv across projects. Because scRNA-seq is memory intensive, I'll use google colab notebook for data analysis. Version control notebooks is harder. Many times, for projects that require deployment of models, traditional python scripts are preferred, while notebooks are very good for EDA and reports.
+
+
+
+
+
+
 
 Setting up a new env with conda based on Mark Sanborn's youtube video:
 ```
