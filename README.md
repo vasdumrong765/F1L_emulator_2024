@@ -17,7 +17,7 @@ The KSQ: Using available scRNA-seq data from cancer cell lines, how would you ex
 * Trastuzumab: Targets HER2 and is used in the treatment of HER2-positive breast and gastric cancers.
 * Bevacizumab: Targets VEGF and is used for a variety of cancers, including colorectal, lung, glioblastoma, breast, liver, and kidney cancer.
 
-#### <code style="color : lightskyblue">Quick info on these mAb's targets</code>
+#### <code style="color : LightSkyBlue">Quick info on these mAb's targets</code>
 * HER2 is a member of the human epidermal growth factor receptor, a plasma-membrane-bound receptor tyrosine kinase (Gene name: *ERBB2*, Uniprot_ID: P04626). Activation of HER2, usually via homo/heterodimerization with EGFR, promotes cell proliferation. Overexpression or gene amplification of HER2 occurs in ~14% of breast cancer ([NIH Cancer Stat Facts](https://seer.cancer.gov/statfacts/html/breast-subtypes.html))
 
 * VEGF stands for Vascular endothelial growth factor. VEGF binds to a tyrosine kinase VEGF receptors which is known to promote angiogenesis. Angiogenesis is a crucial step for tumorigenesis.
@@ -42,12 +42,11 @@ Good experimental designs can help help counteract some "artificial" confounding
 #### One way to think about the KSQ:
 If we have scRNA-seq data from an experiment where Trastuzumab or Bevacizumab was used to treat a specific cancer cell line (each treatment has its own vehicle control), alongside another dataset of untreated scRNA-seq from different cancer cell lines, can we draw conclusions about the effectiveness of these treatments on the untreated cell lines?
 
-
 ## Week 2 - Kinker et al
 This week, we are assigned to read a paper Pan-cancer single-cell RNA-seq identifies recurring programs of cellular heterogeneity by Kinker et al. This gives us a bit more context for the KSQ. 
 
 #### My brief summary
-(In-progress)
+The authors hypothesized that there could some intrinsic properties shared among cancer cells that could explain intratumor heterogenity in the absence of tumor microenvironments. To tackle this question, they conducted single-cell RNAseq experiments profiling 9 pools of cancer cell lines. Each of the eight pools is a mixture of 24-27 cell lines with similar proliferation rates from the Cancer Cell Line Encyclopedia (CCLE) collection. One additional customed pool includes head and neck squamous cell carcinoma (HNSCC) cell lines. They found that there exists recurrent heterogeneous programs (RHPs) of gene expression, concensus expression patternned shared by many types of cancer. The authors then highlighted several functional annotations of the RHPs. Following the overall description of RHPs, the authors chose to focus on Epithelial Senescence (EpiSen) program which are preferentially observed in G0 cells such as HNSCC cell lines. They isolated and experimented on high and low-EpiSen HNSCC cells and demonstrated these two subpopulation elicits distinct sensitivities to pharmacological treatment.
 
 #### Some questions asked by Dean
 * How did the authors handle the potential caveat of co-culturing cell lines before profiling by scRNA-seq? Why do you think that caveat was or was not adequately addressed?
