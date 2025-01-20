@@ -97,9 +97,15 @@ For data download directly in Colab session, run this code below:
 <code style="color : LightSkyBlue">The UMAP plotted here appears different than Figure 1B of Kinker et al. Figure 1B is in fact a t-SNE plot. Therefore, the two different dimensionality reduction methods should produce different results. </code>
 
 * Now color the dots in the UMAP plot by the different columns of the metadata. What patterns do you see? Do they make sense? Take notes directly in your Jupyter notebook.
-
+![UMAP_example_2](figures/umap_02.png)
 
 * Now for the challenge. Try to reproduce Figure 2B and 2D from Kinker et al. See if you can recapitulate some of the patterns in the data that the authors describe. Do your best, but don’t lose any sleep over this.
+
+    * I try to re-optimize UMAP parameters to try to match Figure 2B. You can see that a similar pattern is observed for NCIH1299 cell line.
+    ![UMAP_example_3](figures/umap_03.png)
+
+    * To replot the heatmap, I first looked for genes that made up the RHPs (Supplementary table 4). Then, I plotted the heat with only column clusters (clustering cell by their expression). You can see a similar pattern in expression and clustering for G1/S, G2/M, and EpiSen RHPs.
+    ![UMAP_example_1](figures/heatmap_rep.png)
 
 ## Week 4 - Revisit KSQ
 
