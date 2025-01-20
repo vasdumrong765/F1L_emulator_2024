@@ -93,10 +93,16 @@ For data download directly in Colab session, run this code below:
 
 **Re-enact Figure 1**
 * By the time you get to the end of `240702_kinker_scanpy.ipynb`, you should have produced a UMAP plot, a 2-D visualization of the scRNA-seq dataset. Does this look like Figure 1B of Kinker et al.? How is it similar? How is it different? Take notes directly in your Jupyter notebook.
-
+![UMAP_example_1](figures/umap_01.png)
+<code style="color : LightSkyBlue">The UMAP plotted here appears different than Figure 1B of Kinker et al. Figure 1B is in fact a t-SNE plot. Therefore, the two different dimensionality reduction methods should produce different results. </code>
 
 * Now color the dots in the UMAP plot by the different columns of the metadata. What patterns do you see? Do they make sense? Take notes directly in your Jupyter notebook.
 
 
 * Now for the challenge. Try to reproduce Figure 2B and 2D from Kinker et al. See if you can recapitulate some of the patterns in the data that the authors describe. Do your best, but don’t lose any sleep over this.
 
+## Week 4 - Revisit KSQ
+
+
+
+## Week 5 - Summary
