@@ -9,7 +9,7 @@ You can find memos on various topics here in `README.md`. This memo is not meant
 
 - [X] [Week 1](https://www.linkedin.com/pulse/week-1-f1l-internship-emulator-ksq-dean-lee-354ke/)
 - [X] [Week 2](https://www.linkedin.com/pulse/week-2-f1l-internship-emulator-paper-dean-lee-3crce/)
-- [ ] [Week 3](https://www.linkedin.com/pulse/week-3-f1l-internship-emulator-data-dean-lee-h83qe/)
+- [X] [Week 3](https://www.linkedin.com/pulse/week-3-f1l-internship-emulator-data-dean-lee-h83qe/)
 - [ ] [Week 4](https://www.linkedin.com/pulse/week-4-f1l-internship-emulator-biology-dean-lee-ja4me/)
 - [ ] [Week 5](https://www.linkedin.com/pulse/week-5-f1l-internship-emulator-slides-dean-lee-qqufe/)
 
