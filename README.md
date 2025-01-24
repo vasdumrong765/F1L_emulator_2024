@@ -121,11 +121,14 @@ ERBB2 Breast Cancer               0.646870
       Endometrial/Uterine Cancer  0.163754
       Esophageal Cancer           0.108442
 ```
-* After examining closer, cell lines within cancer cell types typically shows various levels of ERBB2 expression. For example, HC1419 and EFM192A show highest ERBB2 expression among breast cancer cell lines while MKN7 has the highest expression for gastric cancer.
-* Next, I generated pseudobulk expression for each cell line by combining single cells from each cell line together. This should reduce dropouts in the expression matrix for a more robust assessment of gene coexpression using correlation.
+* After examining closer, cell lines within cancer cell types typically shows varying levels of ERBB2 expression. For example, HC1419 and EFM192A show highest ERBB2 expression among breast cancer cell lines while MKN7 has the highest expression for gastric cancer.
+    * Are these cells better model for testing Trastuzumab?
+    * Are cell lines of other cancer cell types with high ERBB2 expression good targets for Trastuzumab?
+* Next, I generated pseudobulk expression for each cell line by combining single cells from each cell line together. This should reduce dropouts in the expression matrix for a more robust assessment of gene coexpression using correlation. Coexpression analysis should give us some ideas which other cell lines are similar to high-ERBB2 expressing cells like HC1419, EFM192A, and MKN7.
+![coexpression_all_genes_erbb2](figures/coexpression_all_genes_erbb2.png)
     * When I used all genes for assessing coexpression, cell lines are unsurprisingly clustered by cancer cell type.
     * When I used only genes that are involved in ERBB2 signaling (based on a reference gene set in Biomart), those genes in the same signaling pathway are highly coexpressed. In fact, MKN7, HC1419 and EFM192A are all found in the same cluster.
-    * I can propose a simple hypothesis. Cell lines that show similar coexpression of ERBB2 signaling pathway genes to MKN7, HC1419 and EFM192A could be sensitive to Trastuzumab treatment. Based on this idea, RCM1 large intestine cell line could be one candidate for testing Trastuzumab treatment in Colorectal Cancer.
+    * I can propose a simple hypothesis. Cell lines that show similar coexpression of ERBB2 signaling pathway genes to MKN7, HC1419 and EFM192A could be sensitive to Trastuzumab treatment. Based on this idea, we can look further into the coexpression matrix.
 
 | Cell line A | Cell line B | Correlation |
 |-----------------|-----------------|--------|
@@ -133,6 +136,8 @@ ERBB2 Breast Cancer               0.646870
 |10_MKN7_STOMACH|10_HCC1419_BREAST|0.854928|
 |10_HCC1419_BREAST|22_RCM1_LARGE_INTESTINE|0.508674|
 |10_HCC1419_BREAST|9_MFE280_ENDOMETRIUM|0.500096|
+
+RCM1 large intestine cell line could be one candidate for testing Trastuzumab treatment in Colorectal Cancer.
 
 **Bevacizumab:** Targets VEGF and is used for a variety of cancers, including colorectal, lung, glioblastoma, breast, liver, and kidney cancer.
 
