@@ -111,7 +111,7 @@ For data download directly in Colab session, run this code below:
 The KSQ: Using available scRNA-seq data from cancer cell lines, how would you explore the use of the following FDA-approved antibody therapies in additional cancers?
 
 **Trastuzumab:** Targets HER2 and is used in the treatment of HER2-positive breast and gastric cancers.
-* My analysis shows that the top two cell types with highest ERBB2 expression are consistent with the current usage of Trastuzumab for treating breast and gastric cancer.
+* My analysis shows that the top two cell types with highest ERBB2 expression are consistent with the currently FDA-approved indication of Trastuzumab for treating breast and gastric cancer.
 ```
 Top 5 Cell Lines with Highest Mean Expression for ERBB2:                                      
 Gene  Indication                  Mean        
@@ -122,12 +122,13 @@ ERBB2 Breast Cancer               0.646870
       Esophageal Cancer           0.108442
 ```
 * After examining closer, cell lines within cancer cell types typically shows varying levels of ERBB2 expression. For example, HC1419 and EFM192A show highest ERBB2 expression among breast cancer cell lines while MKN7 has the highest expression for gastric cancer.
-    * Are these cells better model for testing Trastuzumab?
-    * Are cell lines of other cancer cell types with high ERBB2 expression good targets for Trastuzumab?
-* Next, I generated pseudobulk expression for each cell line by combining single cells from each cell line together. This should reduce dropouts in the expression matrix for a more robust assessment of gene coexpression using correlation. Coexpression analysis should give us some ideas which other cell lines are similar to high-ERBB2 expressing cells like HC1419, EFM192A, and MKN7.
-![coexpression_all_genes_erbb2](figures/coexpression_all_genes_erbb2.png)
+    * Are these cells better models for benchmarking Trastuzumab?
+    * For other cancer types, are those cell lines with high ERBB2 expression good targets for Trastuzumab?
+* Next, I generated pseudobulk expression for each cell line by combining single cells from each cell line together. This should reduce dropouts in the expression matrix for a more robust assessment of gene coexpression using correlation. Coexpression analysis should give us some ideas which other cell lines are similar to high-ERBB2 expressing cells like HC1419, EFM192A, and MKN7. I only focusing on cancer cell types with moderately high level of ERBB2 expression.
     * When I used all genes for assessing coexpression, cell lines are unsurprisingly clustered by cancer cell type.
+![coexpression_all_genes_erbb2](figures/coexpression_all_genes_erbb2.png)
     * When I used only genes that are involved in ERBB2 signaling (based on a reference gene set in Biomart), those genes in the same signaling pathway are highly coexpressed. In fact, MKN7, HC1419 and EFM192A are all found in the same cluster.
+
     * I can propose a simple hypothesis. Cell lines that show similar coexpression of ERBB2 signaling pathway genes to MKN7, HC1419 and EFM192A could be sensitive to Trastuzumab treatment. Based on this idea, we can look further into the coexpression matrix.
 
 | Cell line A | Cell line B | Correlation |
